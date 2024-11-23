@@ -11,7 +11,7 @@ const ProjectCards: React.FC<Skills> = ({ projects }) => {
     return (
         <div className="p-2 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
             {projects.map((project) =>
-                <div className="col-span-1 h-[400px] border border-white-600 rounded-md">
+                <div key={project} className="col-span-1 h-[400px] border border-white-600 rounded-md">
                     <Card>
                         <CardHeader>Project name</CardHeader>
                         <CardContent>
