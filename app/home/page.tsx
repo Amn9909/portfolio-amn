@@ -1,13 +1,9 @@
 "use client"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardDescription, CardHeader } from "@/components/ui/card"
 import CustomCarousel from "../(components)/Carousel";
 import ProfileSection from "../(components)/ProfileSection";
 import ContactUs from "../(components)/ContactUs";
 import ContactInfo from "../(components)/ContactInfo";
-import SearchBar from "../(components)/SearchBar";
-import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import ProjectCards from "../(components)/ProjectCards";
 
