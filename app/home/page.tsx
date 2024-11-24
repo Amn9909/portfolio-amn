@@ -11,6 +11,7 @@ import ProjectCards from "../(components)/ProjectCards";
 
 const Home = () => {
     const [searchModal, setSearchModal] = useState(false)
+
     const skills = [
         "Next.js",
         "React",
@@ -36,12 +37,12 @@ const Home = () => {
     }
 
     return (
-        <div className="grid lg:grid-cols-3">
+        <div className="w-full h-full grid sm:grid-cols-1 lg:grid-cols-3">
             <div className="col-span-1">
-                <div className="h-96 overflow-scroll border border-white-900 rounded-md m-2">
+                <div className=" w-4/4 h-96 overflow-scroll border border-white-900 rounded-md m-2">
                     <ProfileSection skills={skills} profileDetails={profileDetails} />
                 </div>
-                <div className="xl:w-3/4 lg:w-2/4 md:w-3/4 mx-auto p-2">
+                <div className="xl:w-3/4 lg:w-2/4 md:w-3/4 mx-auto p-2 sm:w-3/4">
                     <CustomCarousel skills={skills} />
                 </div>
                 <div className="m-2 border border-gray-500 opacity-30 h-52 rounded-lg">

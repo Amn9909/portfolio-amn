@@ -11,7 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className="h-full w-full">
+      <body 
+      className="h-full w-full"
+      >
         <DarkModeProvider>
           <Navbar />
           {/* <CustomDrawer /> */}
