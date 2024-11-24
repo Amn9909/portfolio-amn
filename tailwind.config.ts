@@ -8,6 +8,16 @@ export default {
   ],
   darkMode: ['class', "class"],
   theme: {
+	screens : {
+		'3xs': '240px', // Extra small screen
+		'xxs': '440px', // Extra small screen
+        'xs': '500px',  // Small mobile view
+        'sm': '640px',  // Default small screen
+        'md': '768px',  // Default medium screen
+        'lg': '1024px', // Default large screen
+        'xl': '1280px', // Default extra large screen
+        '2xl': '1536px', // Default 2x extra large screen
+	},
   	extend: {
   		borderRadius: {
   			lg: 'var(--radius)',

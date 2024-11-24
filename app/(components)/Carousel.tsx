@@ -30,7 +30,7 @@ interface Skill {
 const CustomCarousel : React.FC<Skill> = ({skills}) => {
     const length = ["one","two","three"]
     return (
-        <div className="p-2">
+        <div className="p-2 w-full xl:w-2/3 3xs:w-2/3 ">
             <Carousel
             plugins={[
                 Autoplay({

@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body 
-      className="h-full w-full"
+      className="h-full w-full  3xs:w-[100%] xxs:w-[100%] xs:w-[100%] sm:w-[100%] md:w-[100%] lg:w-[100%] xl:w-[100%] 2xl:w-[100%]"
       >
         <DarkModeProvider>
           <Navbar />

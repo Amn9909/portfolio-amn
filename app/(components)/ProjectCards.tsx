@@ -9,13 +9,18 @@ interface Skills {
 
 const ProjectCards: React.FC<Skills> = ({ projects }) => {
     return (
-        <div className="p-2 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-4">
+        <div className="w-full p-2 grid grid-cols-6 gap-4">
             {projects.map((project) =>
-                <div key={project} className="col-span-1 h-4/4 border border-white-600 rounded-md">
+                <div key={project} className="h-4/4 border border-white-600 rounded-md 2xl:col-span-2 xl:col-span-2 lg:col-span-3 md:col-span-3 sm:col-span-6 xs:col-span-6 xxs:col-span-6 3xs:col-span-6 ">
                     <Card>
                         <CardHeader>Project name</CardHeader>
                         <CardContent>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum ea eius qui aliquid maxime ratione velit excepturi sunt dolores tempora possimus debitis eaque nulla voluptas voluptate eos, doloribus quod fuga!ratione velit excepturi sunt dolores tempora possimus debitis eaque nulla voluptas voluptate eos, doloribus quod fuga!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nostrum ea eius qui aliquid maxime ratione velit excepturi sunt
+                                dolores tempora possimus debitis eaque nulla voluptas voluptate
+                                eos, doloribus quod fuga!ratione velit excepturi sunt dolores
+                                tempora possimus debitis eaque nulla voluptas voluptate eos,
+                                doloribus quod fuga!</p>
                         </CardContent>
                         <CardFooter className='flex justify-between'>
                             {project}

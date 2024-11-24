@@ -37,12 +37,12 @@ const Home = () => {
     }
 
     return (
-        <div className="w-full h-full grid sm:grid-cols-1 lg:grid-cols-3">
-            <div className="col-span-1">
-                <div className=" w-4/4 h-96 overflow-scroll border border-white-900 rounded-md m-2">
+        <div className="w-full h-full grid grid-cols-3">
+            <div className="2xl:grid-cols-3 xl:grid-cols-3 3xs:col-span-3 2xl:col-span-1 sm:col-span-3 xs:col-span-3 xxs:col-span-3 md:col-span-1 lg:col-span-1 ">
+                <div className="w-4/4 h-96 overflow-scroll border border-white-900 rounded-md m-2">
                     <ProfileSection skills={skills} profileDetails={profileDetails} />
                 </div>
-                <div className="xl:w-3/4 lg:w-2/4 md:w-3/4 mx-auto p-2 sm:w-3/4">
+                <div className="w-full flex items-center justify-center overflow-hidden">
                     <CustomCarousel skills={skills} />
                 </div>
                 <div className="m-2 border border-gray-500 opacity-30 h-52 rounded-lg">
@@ -55,19 +55,17 @@ const Home = () => {
                     direct contact us
                 </div> */}
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 3xs:col-span-3 xxs:col-span-3 xs:col-span-3 sm:col-span-3 md:col-span-2 lg:col-span-2 xl:col-span-2 2xl:col-span-2">
                 <div className="m-2">
-                    <Card className=" p-2 flex items-center justify-between">
-
+                    <Card className="p-2 flex items-center justify-between">
                         <CardHeader>
                             <CardDescription>Search projects</CardDescription>
                         </CardHeader>
                     </Card>
                 </div>
+                {/* <div>
+                </div> */}
                   <ProjectCards projects={skills}/>
-            </div>
-            <div> 
-                {/* searchModal ?? <SearchBar isOpen={searchModal} /> */}
             </div>
         </div>
     )
