@@ -51,7 +51,7 @@ const Home = () => {
                     <CustomCarousel skills={skills} />
                 </div>
                 <div
-                    className={`m-2 border h-44 rounded-md ${theme === 'dark' ? 'border-white-900' : 'border-white-900'}`}
+                    className={`m-2 border h-38 rounded-md ${theme === 'dark' ? 'border-white-900' : 'border-white-900'}`}
                 >
                     <ContactInfo />
                 </div>

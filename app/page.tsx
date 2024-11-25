@@ -1,5 +1,4 @@
 import Navbar from "./(components)/Navbar";
-import TestCompo from "./(toggleDarkMode)/TestCompo";
 import ThemeSwitcher from "./(toggleDarkMode)/ThemeSwitcher";
 
 
