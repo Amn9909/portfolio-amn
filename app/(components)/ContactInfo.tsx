@@ -6,13 +6,13 @@ import { FaGithub } from "react-icons/fa";
 
 const ContactInfo = () => {
     return (
-        <div className='h-[100%] text-black'>
-            <ul className='text-black'>
-                <li className='text-black'>
-                    <span className='inline-block p-2  align-middle cursor-pointer text-black'>
+        <div className='h-[100%]'>
+            <ul>
+                <li>
+                    <span className='inline-block p-2  align-middle cursor-pointer'>
                         < MdMarkEmailRead />
                     </span>
-                    <p className='inline-block p-2  align-middle cursor-pointer text-black'>
+                    <p className='inline-block p-2  align-middle cursor-pointer'>
                         amankaziak1999@gmail.com
                     </p>
                 </li>

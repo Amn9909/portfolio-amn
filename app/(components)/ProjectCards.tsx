@@ -22,12 +22,14 @@ const ProjectCards: React.FC<Skills> = ({ projects }) => {
                                 tempora possimus debitis eaque nulla voluptas voluptate eos,
                                 doloribus quod fuga!</p>
                         </CardContent>
-                        <CardFooter className='flex justify-between'>
-                            {project}
-                            <div>
-                                <Button className='ml-4'>Buy</Button>
-                                <Button variant="outline" size="icon">
-                                    <ChevronRight />
+                        <CardFooter className='flex justify-between items-center p-2 m-0'>
+                            <div className="flex items-center">
+                                <h2>{project}</h2>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Button className="">Buy</Button>
+                                <Button className="">
+                                    <ChevronRight/>
                                 </Button>
                             </div>
                         </CardFooter>

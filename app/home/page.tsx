@@ -6,11 +6,14 @@ import ContactUs from "../(components)/ContactUs";
 import ContactInfo from "../(components)/ContactInfo";
 import { useState } from "react";
 import ProjectCards from "../(components)/ProjectCards";
+import { useTheme } from "next-themes";
 
 
 
 const Home = () => {
     const [searchModal, setSearchModal] = useState(false)
+
+    const { theme } = useTheme()
 
     const skills = [
         "Next.js",
@@ -37,7 +40,9 @@ const Home = () => {
     }
 
     return (
-        <div className="w-full h-full grid grid-cols-3">
+        <div
+            className={`w-full h-full grid grid-cols-3 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}
+        >
             <div className="2xl:grid-cols-3 xl:grid-cols-3 3xs:col-span-3 2xl:col-span-1 sm:col-span-3 xs:col-span-3 xxs:col-span-3 md:col-span-1 lg:col-span-1 ">
                 <div className="w-4/4 h-96 overflow-scroll border border-white-900 rounded-md m-2">
                     <ProfileSection skills={skills} profileDetails={profileDetails} />
@@ -45,15 +50,16 @@ const Home = () => {
                 <div className="w-full flex items-center justify-center overflow-hidden">
                     <CustomCarousel skills={skills} />
                 </div>
-                <div className="m-2 border border-gray-500 opacity-30 h-52 rounded-lg">
+                <div
+                    className={`m-2 border h-44 rounded-md ${theme === 'dark' ? 'border-white-900' : 'border-white-900'}`}
+                >
                     <ContactInfo />
                 </div>
-                <div className="m-2 border border-gray-500 opacity-30 h-36 rounded-lg">
+                <div
+                    className={`m-2 border h-36 rounded-md ${theme === 'dark' ? 'border-white-900' : 'border-white-900'}`}
+                >
                     <ContactUs />
                 </div>
-                {/* <div className="m-2 border border-gray-500 opacity-30 h-52 rounded-lg">
-                    direct contact us
-                </div> */}
             </div>
             <div className="col-span-2 3xs:col-span-3 xxs:col-span-3 xs:col-span-3 sm:col-span-3 md:col-span-2 lg:col-span-2 xl:col-span-2 2xl:col-span-2">
                 <div className="m-2">
@@ -65,7 +71,7 @@ const Home = () => {
                 </div>
                 {/* <div>
                 </div> */}
-                  <ProjectCards projects={skills}/>
+                <ProjectCards projects={skills} />
             </div>
         </div>
     )
