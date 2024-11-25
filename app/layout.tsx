@@ -19,7 +19,6 @@ export default function RootLayout({
         <DarkModeProvider>
           <Navbar />
           {children}
-          <Toaster /> 
         </DarkModeProvider>
       </body>
     </html>

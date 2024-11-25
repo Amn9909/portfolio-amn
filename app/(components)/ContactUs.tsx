@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { MdMarkEmailRead } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -10,8 +10,6 @@ import { useTheme } from 'next-themes';
 
 const ContactUs = () => {
   const { theme } = useTheme()
-
-  console.log("first",theme)
 
   const socialLinks = [
     {
@@ -47,7 +45,7 @@ const ContactUs = () => {
       if (social === "email") {
         window.location.href = `mailto:${socialData.value}`;
       } else if (social === "phone") {
-        window.location.href = `tel:${socialData.value}`;
+        // window.location.href = `tel:${socialData.value}`;
       } else {
         window.open(socialData.value, "_blank");
       }

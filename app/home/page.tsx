@@ -4,14 +4,12 @@ import CustomCarousel from "../(components)/Carousel";
 import ProfileSection from "../(components)/ProfileSection";
 import ContactUs from "../(components)/ContactUs";
 import ContactInfo from "../(components)/ContactInfo";
-import { useState } from "react";
 import ProjectCards from "../(components)/ProjectCards";
 import { useTheme } from "next-themes";
 
 
 
 const Home = () => {
-    const [searchModal, setSearchModal] = useState(false)
 
     const { theme } = useTheme()
 
@@ -69,8 +67,6 @@ const Home = () => {
                         </CardHeader>
                     </Card>
                 </div>
-                {/* <div>
-                </div> */}
                 <ProjectCards projects={skills} />
             </div>
         </div>
