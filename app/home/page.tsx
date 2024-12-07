@@ -32,6 +32,56 @@ const Home = () => {
         "Video Editing",
     ];
 
+    const projects = [
+        {
+            name: 'Backend Development',
+            description:
+                'Designed and developed scalable backend systems to support modern web applications. ' +
+                'Built microservices using Node.js, Express, and NestJS, incorporating database integration, ' +
+                'authentication, and real-time features like WebSocket communication.',
+            technologies: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL', 'Redis', 'Docker'],
+        },
+        {
+            name: 'Frontend Development',
+            description:
+                'Created interactive and user-friendly interfaces for web applications. Worked with modern ' +
+                'JavaScript frameworks to deliver seamless user experiences, integrating responsive designs ' +
+                'and state management for robust functionality.',
+            technologies: ['React', 'Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Chakra UI', 'shadcn'],
+        },
+        {
+            name: 'Graphics Design',
+            description:
+                'Produced compelling graphic designs for marketing materials, websites, and branding. ' +
+                'Focused on creating visually appealing content that aligns with brand identity and resonates ' +
+                'with target audiences.',
+            technologies: ['Adobe Photoshop', 'Adobe Illustrator', 'Figma', 'Canva'],
+        },
+        {
+            name: 'Video Editing',
+            description:
+                'Edited high-quality videos for various purposes, including promotional content, tutorials, ' +
+                'and social media. Utilized advanced editing tools to ensure smooth transitions, captivating effects, ' +
+                'and professional-grade output.',
+            technologies: ['Adobe Premiere Pro', 'Final Cut Pro', 'DaVinci Resolve', 'After Effects'],
+        },
+        {
+            name: 'Content Creation',
+            description:
+                'Developed engaging content strategies and delivered high-value written, visual, and multimedia content ' +
+                'for blogs, social media, and marketing campaigns. Ensured alignment with SEO principles and audience engagement.',
+            technologies: ['WordPress', 'Google Docs', 'Grammarly', 'SEO Tools (Ahrefs, SEMrush)'],
+        },
+        {
+            name: 'Agency Services',
+            description:
+                'Operated as a one-stop solution for clients, providing end-to-end services ranging from web development ' +
+                'to digital marketing and branding. Ensured successful project delivery by collaborating with diverse teams.',
+            technologies: ['Asana', 'Slack', 'Google Workspace', 'Notion', 'Zoho CRM'],
+        },
+    ];
+
+
     const profileDetails = {
         name: 'Aman Kazi',
         designation: 'Full-stack Software Developer'
@@ -67,7 +117,9 @@ const Home = () => {
                         </CardHeader>
                     </Card>
                 </div>
-                <ProjectCards projects={skills} />
+                <div className="h-3/4">
+                    <ProjectCards projects={projects} />
+                </div>
             </div>
         </div>
     )

@@ -1,43 +1,52 @@
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import React from 'react'
-import { Button } from "@/components/ui/button"
-import { ChevronRight } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge';
 
+interface Project {
+    name: string;
+    description: string;
+    technologies: string[];
+}
 interface Skills {
-    projects: string[]
+    projects: Project[];
 }
 
 const ProjectCards: React.FC<Skills> = ({ projects }) => {
     return (
-        <div className="w-full p-2 grid grid-cols-6 gap-4">
-            {projects.map((project) =>
-                <div key={project} className="h-4/4 border border-white-600 rounded-md 2xl:col-span-2 xl:col-span-2 lg:col-span-3 md:col-span-3 sm:col-span-6 xs:col-span-6 xxs:col-span-6 3xs:col-span-6 ">
-                    <Card>
-                        <CardHeader>Project name</CardHeader>
+        <div className="w-full h-full p-2 grid grid-cols-6 gap-4">
+            {projects.map((project) => (
+                <div 
+                    key={project.name} 
+                    className="h-full border border-white-600 rounded-md 
+                        2xl:col-span-2 xl:col-span-2 lg:col-span-3 md:col-span-3 
+                        sm:col-span-6 xs:col-span-6 xxs:col-span-6 3xs:col-span-6"
+                >
+                    <Card className="h-full flex flex-col">
+                        <CardHeader>{project.name}</CardHeader>
                         <CardContent>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Nostrum ea eius qui aliquid maxime ratione velit excepturi sunt
-                                dolores tempora possimus debitis eaque nulla voluptas voluptate
-                                eos, doloribus quod fuga!ratione velit excepturi sunt dolores
-                                tempora possimus debitis eaque nulla voluptas voluptate eos,
-                                doloribus quod fuga!</p>
+                            <p>{project.description}</p>
                         </CardContent>
-                        <CardFooter className='flex justify-between items-center p-2 m-0'>
-                            <div className="flex items-center">
-                                <h2>{project}</h2>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <Button className="">Buy</Button>
-                                <Button className="">
-                                    <ChevronRight/>
-                                </Button>
-                            </div>
+                        <CardContent>
+                            {project.technologies.map((tech) => (
+                                <Badge 
+                                    className="m-1 hover:scale-110" 
+                                    key={tech} 
+                                    variant="secondary"
+                                >
+                                    {tech}
+                                </Badge>
+                            ))}
+                        </CardContent>
+                        {/* Ensure the footer stays at the bottom */}
+                        <CardFooter className="mt-auto flex justify-end items-center p-2">
+                            <Button>View more</Button>
                         </CardFooter>
                     </Card>
                 </div>
-            )}
+            ))}
         </div>
-    )
-}
+    );
+};
 
-export default ProjectCards
+export default ProjectCards;

@@ -1,11 +1,12 @@
 import Navbar from "./(components)/Navbar";
 import ThemeSwitcher from "./(toggleDarkMode)/ThemeSwitcher";
+import Home from "./home/page";
 
 
 export default function RootPage() {
   return (
-    // this is where all the components and pages should be attached
     <div>
+      <Home/>
     </div>
   );
 }
