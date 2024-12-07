@@ -112,7 +112,8 @@ const Home = () => {
             <div className="col-span-2 3xs:col-span-3 xxs:col-span-3 xs:col-span-3 sm:col-span-3 md:col-span-2 lg:col-span-2 xl:col-span-2 2xl:col-span-2">
                 <div className="m-2">
                     <Card className="p-2 flex items-center justify-between">
-                        <CardHeader>
+                        <CardHeader className="font-extrabold">
+                            Aman H Kazi
                             {/* <CardDescription>Search projects</CardDescription> */}
                         </CardHeader>
                     </Card>
