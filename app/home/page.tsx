@@ -39,7 +39,7 @@ const Home = () => {
                 'Designed and developed scalable backend systems to support modern web applications. ' +
                 'Built microservices using Node.js, Express, and NestJS, incorporating database integration, ' +
                 'authentication, and real-time features like WebSocket communication.',
-            technologies: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL', 'Redis', 'Docker'],
+            technologies: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL', 'MySQL','Redis', 'Docker'],
         },
         {
             name: 'Frontend Development',
@@ -47,7 +47,7 @@ const Home = () => {
                 'Created interactive and user-friendly interfaces for web applications. Worked with modern ' +
                 'JavaScript frameworks to deliver seamless user experiences, integrating responsive designs ' +
                 'and state management for robust functionality.',
-            technologies: ['React', 'Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Chakra UI', 'shadcn'],
+            technologies: ['React', 'Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Matrial UI', 'shadcn'],
         },
         {
             name: 'Graphics Design',
@@ -63,7 +63,7 @@ const Home = () => {
                 'Edited high-quality videos for various purposes, including promotional content, tutorials, ' +
                 'and social media. Utilized advanced editing tools to ensure smooth transitions, captivating effects, ' +
                 'and professional-grade output.',
-            technologies: ['Adobe Premiere Pro', 'Final Cut Pro', 'DaVinci Resolve', 'After Effects'],
+            technologies: ['Adobe Premiere Pro', 'After Effects','Cap cut'],
         },
         {
             name: 'Content Creation',
