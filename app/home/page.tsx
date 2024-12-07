@@ -96,7 +96,7 @@ const Home = () => {
                     <ProfileSection skills={skills} profileDetails={profileDetails} />
                 </div>
                 <div className="w-full flex items-center justify-center overflow-hidden">
-                    <CustomCarousel skills={skills} />
+                    <CustomCarousel projects={projects} />
                 </div>
                 <div
                     className={`m-2 border h-38 rounded-md ${theme === 'dark' ? 'border-white-900' : 'border-white-900'}`}
@@ -113,7 +113,7 @@ const Home = () => {
                 <div className="m-2">
                     <Card className="p-2 flex items-center justify-between">
                         <CardHeader>
-                            <CardDescription>Search projects</CardDescription>
+                            {/* <CardDescription>Search projects</CardDescription> */}
                         </CardHeader>
                     </Card>
                 </div>

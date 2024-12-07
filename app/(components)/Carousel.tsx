@@ -16,48 +16,54 @@ export function Example() {
 }
 
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel"
 
+
+interface Project {
+  name: string;
+  description: string;
+  technologies: string[];
+}
 interface Skill {
-  skills : string[]
+  projects: Project[]
 }
 
-const CustomCarousel : React.FC<Skill> = ({skills}) => {
-    const length = ["one","two","three"]
-    return (
-        <div className="p-2 w-full xl:w-2/3 3xs:w-2/3 ">
-            <Carousel
-            plugins={[
-                Autoplay({
-                  delay: 2000,
-                }),
-              ]}
-                opts={{
-                    align: "start",
-                    loop: true,
-                }}>
-                <CarouselContent className="p-2">
-                    {skills.map((item) =>
-                        <CarouselItem key={item}>
-                            <Card>
-                                <CardContent className=" h-[100%] flex justify-center items-center">
-                                    {item}
-                                </CardContent>
-                            </Card>
-                        </CarouselItem>
-                    )}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel>
+const CustomCarousel: React.FC<Skill> = ({ projects }) => {
+  return (
+    <div className="p-2 h-full w-full xl:w-2/3 3xs:w-2/3 ">
+      <Carousel
+      className="flex justify-center items-center"
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
+        opts={{
+          align: "start",
+          loop: true,
+        }}>
+        <CarouselContent className="h-full">
+          {projects.map((proj) =>
+            <CarouselItem key={proj.name}>
+              <Card>
+                <CardContent className="flex justify-center items-center p-4">
+                  {proj.name}
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          )}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
 
-        </div>
-    )
+    </div>
+  )
 }
 
 export default CustomCarousel
