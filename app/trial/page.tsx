@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div>
         {/* <SparklesPreview /> */}
-        <SVGMaskEffectDemo />
+        {/* <SVGMaskEffectDemo /> */}
     </div>
   )
 }
