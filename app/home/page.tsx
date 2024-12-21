@@ -6,6 +6,8 @@ import ContactUs from "../(components)/ContactUs";
 import ContactInfo from "../(components)/ContactInfo";
 import ProjectCards from "../(components)/ProjectCards";
 import { useTheme } from "next-themes";
+import GithubContribution from "../asset/git-commits.png"
+import Image from "next/image";
 
 
 
@@ -39,7 +41,7 @@ const Home = () => {
                 'Designed and developed scalable backend systems to support modern web applications. ' +
                 'Built microservices using Node.js, Express, and NestJS, incorporating database integration, ' +
                 'authentication, and real-time features like WebSocket communication.',
-            technologies: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL', 'MySQL','Redis', 'Docker'],
+            technologies: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Docker'],
         },
         {
             name: 'Frontend Development',
@@ -63,7 +65,7 @@ const Home = () => {
                 'Edited high-quality videos for various purposes, including promotional content, tutorials, ' +
                 'and social media. Utilized advanced editing tools to ensure smooth transitions, captivating effects, ' +
                 'and professional-grade output.',
-            technologies: ['Adobe Premiere Pro', 'After Effects','Cap cut'],
+            technologies: ['Adobe Premiere Pro', 'After Effects', 'Cap cut'],
         },
         {
             name: 'Content Creation',
@@ -111,10 +113,10 @@ const Home = () => {
             </div>
             <div className="col-span-2 3xs:col-span-3 xxs:col-span-3 xs:col-span-3 sm:col-span-3 md:col-span-2 lg:col-span-2 xl:col-span-2 2xl:col-span-2">
                 <div className="m-2">
-                    <Card className="p-2 flex items-center justify-between">
+                    <Card className="flex items-center justify-between">
                         <CardHeader className="font-extrabold">
-                            Aman H Kazi
-                            {/* <CardDescription>Search projects</CardDescription> */}
+                            <Image src={GithubContribution} alt="Example Image" height={300} />
+                            {/* <img src={GithubContribution} alt="git contribution" /> */}
                         </CardHeader>
                     </Card>
                 </div>
