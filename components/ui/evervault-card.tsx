@@ -19,6 +19,7 @@ export const EvervaultCard = ({
   const [randomString, setRandomString] = useState("");
 
   useEffect(() => {
+  // eslint-disable-next-line prefer-const
     let str = generateRandomString(1500);
     setRandomString(str);
   }, []);
