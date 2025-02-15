@@ -11,7 +11,9 @@ export const EvervaultCard = ({
   text?: string;
   className?: string;
 }) => {
+  // eslint-disable-next-line prefer-const
   let mouseX = useMotionValue(0);
+  // eslint-disable-next-line prefer-const
   let mouseY = useMotionValue(0);
 
   const [randomString, setRandomString] = useState("");
