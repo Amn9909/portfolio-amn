@@ -1,22 +1,23 @@
 import React from "react";
 import { EvervaultCard, Icon } from "../../../../components/ui/evervault-card";
+import { ProjectInterface } from "./ProjectsCards";
 
-export function RevilCard() {
+
+
+export function RevilCard({
+  id,
+  description = "No data",
+  title = "No title",
+}: ProjectInterface) {
   return (
-    <div className="hover:scale-105 drop-shadow-2xl border rounded-3xl border-black/[0.2]  dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
-      {/* <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" /> */}
-
-      <EvervaultCard text="hover" />
+    <div key={id} className="hover:scale-90 transition-transform duration-300 ease-in-out border rounded-3xl border-black/[0.6]  shadow-2xl shadow-gray-950/50 dark:border-white/[0.2] dark:shadow-xl dark:shadow-gray-50/5 flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
+      <EvervaultCard text={title} />
 
       <h2 className="dark:text-white text-black mt-4 text-sm font-light">
-        Hover over this card to reveal an awesome effect. Running out of copy
-        here.
+        {description}
       </h2>
       <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
-        Watch me hover
+        {title}
       </p>
     </div>
   );

@@ -100,7 +100,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: cardPattern) {
 }
 
 const characters =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  "AMAN KAZI 2";
 export const generateRandomString = (length: number) => {
   // eslint-disable-next-line prefer-const 
   let result = "";

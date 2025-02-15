@@ -6,7 +6,7 @@ import Home from "./home/page";
 
 export default function RootPage() {
   return (
-    <div>
+    <div className="h-full w-full">
       {/* <Home/> */}
       <AskitHeroSection />
     </div>
