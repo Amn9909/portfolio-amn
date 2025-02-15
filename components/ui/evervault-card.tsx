@@ -32,6 +32,7 @@ export const EvervaultCard = ({
   
 
   function onMouseMove({ currentTarget, clientX, clientY }: MouseMoveEvent) {
+  // eslint-disable-next-line prefer-const
     let { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -74,7 +75,9 @@ interface cardPattern {
 }
 
 export function CardPattern({ mouseX, mouseY, randomString }: cardPattern) {
+  // eslint-disable-next-line prefer-const
   let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
+  // eslint-disable-next-line prefer-const
   let style = { maskImage, WebkitMaskImage: maskImage };
 
   return (
@@ -99,6 +102,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: cardPattern) {
 const characters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 export const generateRandomString = (length: number) => {
+  // eslint-disable-next-line prefer-const 
   let result = "";
   for (let i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
