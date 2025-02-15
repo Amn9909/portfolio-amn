@@ -1,6 +1,6 @@
 "use client";
-import { useMotionValue } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import { MotionValue, useMotionValue } from "framer-motion";
+import React, { useState, useEffect, SVGProps } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -19,12 +19,19 @@ export const EvervaultCard = ({
   const [randomString, setRandomString] = useState("");
 
   useEffect(() => {
-  // eslint-disable-next-line prefer-const
+    // eslint-disable-next-line prefer-const
     let str = generateRandomString(1500);
     setRandomString(str);
   }, []);
 
-  function onMouseMove({ currentTarget, clientX, clientY }: any) {
+  interface MouseMoveEvent {
+    currentTarget: HTMLElement;
+    clientX: number;
+    clientY: number;
+  }
+  
+
+  function onMouseMove({ currentTarget, clientX, clientY }: MouseMoveEvent) {
     let { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -60,7 +67,13 @@ export const EvervaultCard = ({
   );
 };
 
-export function CardPattern({ mouseX, mouseY, randomString }: any) {
+interface cardPattern {
+  mouseX: MotionValue<number>;
+  mouseY: MotionValue<number>;
+  randomString: string;
+}
+
+export function CardPattern({ mouseX, mouseY, randomString }: cardPattern) {
   let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
 
@@ -93,7 +106,11 @@ export const generateRandomString = (length: number) => {
   return result;
 };
 
-export const Icon = ({ className, ...rest }: any) => {
+interface IconProps extends SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+export const Icon = ({ className, ...rest }: IconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
