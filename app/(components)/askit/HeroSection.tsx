@@ -1,14 +1,28 @@
-import React from 'react'
-import { AskNavbar } from './components/AskNavbar'
-import { RevilCard } from './components/RevilCard'
-import ProjectsCards from './components/ProjectsCards'
+import React from "react";
+import { AskNavbar } from "./components/AskNavbar";
+import { RevilCard } from "./components/RevilCard";
+import ProjectsCards from "./components/ProjectsCards";
+import { AnimatedPin } from "./components/Profile3DCard";
+import { AskCarousel } from "./components/Carousel";
+import PricingSectionCards from "./components/pricingSection/Pricing";
+import { AppleFloatingDock } from "./components/doc/AppleDoc";
 
 const projects = [
   {
     id: 1,
     title: "Coalitionify",
-    description: "A platform that integrates various services with WebSockets for real-time notifications, authentication, and payment integration using Razorpay.",
-    technologies: ["Next.js", "NestJS", "React", "Redux", "Tailwind CSS", "Socket.IO", "MongoDB", "Docker"],
+    description:
+      "A platform that integrates various services with WebSockets for real-time notifications, authentication, and payment integration using Razorpay.",
+    technologies: [
+      "Next.js",
+      "NestJS",
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "Socket.IO",
+      "MongoDB",
+      "Docker",
+    ],
     features: [
       "Real-time notifications using WebSockets",
       "Authentication and authorization",
@@ -22,7 +36,8 @@ const projects = [
   {
     id: 2,
     title: "AddressBook API",
-    description: "A backend microservice that manages an address book, handling contact creation, updates, and real-time synchronization with WebSockets.",
+    description:
+      "A backend microservice that manages an address book, handling contact creation, updates, and real-time synchronization with WebSockets.",
     technologies: ["NestJS", "MongoDB", "Mongoose", "Socket.IO", "Redis"],
     features: [
       "CRUD operations for contacts",
@@ -36,7 +51,8 @@ const projects = [
   {
     id: 3,
     title: "Interactive Developer Portfolio",
-    description: "A visually appealing portfolio showcasing projects, skills, and blog posts with animations and dark mode support.",
+    description:
+      "A visually appealing portfolio showcasing projects, skills, and blog posts with animations and dark mode support.",
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Shadcn UI"],
     features: [
       "Smooth animations using Framer Motion",
@@ -50,8 +66,15 @@ const projects = [
   {
     id: 4,
     title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with product management, payments, and real-time order tracking.",
-    technologies: ["React", "Redux Toolkit", "Express.js", "MongoDB", "Razorpay"],
+    description:
+      "A full-stack e-commerce platform with product management, payments, and real-time order tracking.",
+    technologies: [
+      "React",
+      "Redux Toolkit",
+      "Express.js",
+      "MongoDB",
+      "Razorpay",
+    ],
     features: [
       "Product management dashboard",
       "Cart and checkout system",
@@ -64,7 +87,8 @@ const projects = [
   {
     id: 5,
     title: "DevConnect - Developer Social Network",
-    description: "A social platform for developers to share knowledge, post blogs, and connect through messaging.",
+    description:
+      "A social platform for developers to share knowledge, post blogs, and connect through messaging.",
     technologies: ["Next.js", "Firebase", "Tailwind CSS", "Node.js"],
     features: [
       "User authentication with Firebase",
@@ -78,7 +102,8 @@ const projects = [
   {
     id: 6,
     title: "SaaS Dashboard",
-    description: "A dashboard for monitoring SaaS product performance, including revenue tracking and user analytics.",
+    description:
+      "A dashboard for monitoring SaaS product performance, including revenue tracking and user analytics.",
     technologies: ["Next.js", "Chakra UI", "PostgreSQL", "NestJS"],
     features: [
       "Graph-based analytics",
@@ -92,13 +117,14 @@ const projects = [
 ];
 
 const AskitHeroSection = () => {
-
   return (
     <div className="h-full w-full mt-24 ">
-      {/* <AskNavbar/> */}
-      <ProjectsCards projects={projects} />
+      {/* <AskCarousel /> */}
+      {/* <ProjectsCards projects={projects} />
+      <PricingSectionCards /> */}
+      <AppleFloatingDock />
     </div>
-  )
-}
+  );
+};
 
-export default AskitHeroSection
+export default AskitHeroSection;
