@@ -97,6 +97,7 @@ const FloatingDockDesktop = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
+  // eslint-disable-next-line prefer-const
   let mouseX = useMotionValue(Infinity);
   return (
     <motion.div
@@ -125,40 +126,50 @@ function IconContainer({
   icon: React.ReactNode;
   href: string;
 }) {
+    // eslint-disable-next-line prefer-const
   let ref = useRef<HTMLDivElement>(null);
 
+  // eslint-disable-next-line prefer-const
   let distance = useTransform(mouseX, (val) => {
+    // eslint-disable-next-line prefer-const
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
 
     return val - bounds.x - bounds.width / 2;
   });
 
+  // eslint-disable-next-line prefer-const
   let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  // eslint-disable-next-line prefer-const
   let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-
+  // eslint-disable-next-line prefer-const
   let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+  // eslint-disable-next-line prefer-const
   let heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
     [20, 40, 20]
   );
 
+  // eslint-disable-next-line prefer-const
   let width = useSpring(widthTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
+  // eslint-disable-next-line prefer-const
   let height = useSpring(heightTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
 
+  // eslint-disable-next-line prefer-const
   let widthIcon = useSpring(widthTransformIcon, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
+  // eslint-disable-next-line prefer-const
   let heightIcon = useSpring(heightTransformIcon, {
     mass: 0.1,
     stiffness: 150,
