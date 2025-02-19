@@ -65,9 +65,9 @@ const HeaderSection = () => {
           <span className="p-2 text-balance opacity-80">
             My name is
             <span className="ml-2 mr-1 text-xl font-bold underline">
-              Aman Kazi
+              Aman Kazi,
             </span>
-            , and I am a passionate software developer with expertise in
+            and I'm a passionate software developer with expertise in
             delivering interactive frontends and robust backend solutions. Over
             the past 2 years, I have honed my skills in modern JavaScript
             frameworks like React and Next.js, backend technologies such as
