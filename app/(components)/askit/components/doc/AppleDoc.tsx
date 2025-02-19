@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FloatingDock } from "../../../../../components/ui/floating-dock";
 import {
@@ -9,14 +10,12 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 import ThemeSwitcher from "@/app/(toggleDarkMode)/ThemeSwitcher";
-
+import { motion } from "framer-motion";
 export function AppleFloatingDock() {
   const links = [
     {
       title: "Theme",
-      icon: (
-        <ThemeSwitcher />
-      ),
+      icon: <ThemeSwitcher />,
       href: "#",
     },
     {
@@ -72,8 +71,13 @@ export function AppleFloatingDock() {
     },
   ];
   return (
-    <div className="flex items-center justify-center h-screen w-full fixed bottom-0 left-0 right-0">
+    <motion.div
+      initial={{ y: 100, opacity: 0 }} // Start 100px below with 0 opacity
+      animate={{ y: 0, opacity: 1 }} // Move to normal position with full opacity
+      transition={{ duration: 0.8, ease: "easeOut" }} // Smooth easing
+      className="fixed bottom-0 left-0 right-0 text-white h-16 flex justify-center items-center rounded-xl"
+    >
       <FloatingDock items={links} />
-    </div>
+    </motion.div>
   );
 }
