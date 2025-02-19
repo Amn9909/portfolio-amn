@@ -6,6 +6,7 @@ import { AnimatedPin } from "./components/Profile3DCard";
 import { AskCarousel } from "./components/Carousel";
 import PricingSectionCards from "./components/pricingSection/Pricing";
 import { AppleFloatingDock } from "./components/doc/AppleDoc";
+import HeaderSection from "./components/headerSection/HeaderSection";
 
 const projects = [
   {
@@ -118,10 +119,8 @@ const projects = [
 
 const AskitHeroSection = () => {
   return (
-    <div className="h-full w-full mt-24 ">
-      {/* <AskCarousel /> */}
-      {/* <ProjectsCards projects={projects} />
-      <PricingSectionCards /> */}
+    <div className="mt-24 ">
+      <HeaderSection />
       <AppleFloatingDock />
     </div>
   );
