@@ -9,7 +9,12 @@ import SepratorWithAnimation from "../SepratorWithAnimation";
 
 const HeaderSection = () => {
   const dawnloadCV = () => {
-    alert("file is dawnloading....")
+    const link = document.createElement("a");
+    link.href = `public\Aman h kazi software developer 2025.pdf`; // Ensure your file is in the public folder
+    link.download = "Aman_Kazi_Resume.pdf"; // Custom filename for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
   return (
     <div className="flex justify-center">
