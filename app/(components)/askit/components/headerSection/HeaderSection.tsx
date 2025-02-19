@@ -6,6 +6,8 @@ import { BadgeIcon } from "lucide-react";
 import PaperIcon from "@/lib/src/PaperIcon";
 import LocationTriggerIcon from "@/lib/src/LocationTriggerIcon";
 import SepratorWithAnimation from "../SepratorWithAnimation";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import profilePicImg from "../../../../asset/profile-pic.jpg"
 
 const HeaderSection = () => {
   const dawnloadCV = () => {
@@ -16,6 +18,7 @@ const HeaderSection = () => {
     link.click();
     document.body.removeChild(link);
   };
+
   return (
     <div className="flex justify-center">
       <motion.div
@@ -26,27 +29,42 @@ const HeaderSection = () => {
       >
         {/* heading and sub-title  */}
 
-        <div className="p-2">
-          <h1 className="font-mono text-8xl 3xs:text-5xl xxs:text-7xl xs:text-7xl ">
-            Hi, I&apos;m
-          </h1>
-          <h1 className="font-mono text-8xl 3xs:text-5xl xxs:text-7xl xs:text-7xl">
-            Aman
-          </h1>
+        <div className="p-2 flex">
+          <div className="w-[70%]">
+            <h1 className="font-mono text-8xl 3xs:text-5xl xxs:text-7xl xs:text-6xl ">
+              Hi, I&apos;m
+            </h1>
+            <h1 className="font-mono text-8xl 3xs:text-5xl xxs:text-7xl xs:text-7xl">
+              Aman
+            </h1>
+          </div>
 
-          <SepratorWithAnimation />
-          <h2 className="opacity-80">
-            Software developer from pune, product builder & contributor{" "}
-          </h2>
+          <motion.div
+           initial={{ y: 100, opacity: 0 }}
+           animate={{ y: 0, opacity: 1 }}
+           transition={{ duration: 0.8, ease: "easeIn" }}
+           className="w-[30%]">
+            <Avatar className="w-30 h-30">
+              <AvatarImage src={profilePicImg.src} alt="@shadcn" />
+              <AvatarFallback>AK</AvatarFallback>
+            </Avatar>
+          </motion.div>
+        </div>
+        <div>
+        <SepratorWithAnimation />
+            <h2 className="opacity-80">
+              Software developer from pune, product builder & contributor{" "}
+            </h2>
         </div>
 
-        {/* Badges  */}
+       <div>
+         {/* Badges  */}
 
-        <motion.div
+         <motion.div
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "backOut" }}
-          className=" w-[50%] p-2 flex items-center justify-center"
+          className="p-2 flex items-center justify-start"
         >
           <Badge>
             <LocationTriggerIcon />
@@ -60,6 +78,7 @@ const HeaderSection = () => {
         </motion.div>
 
         <SepratorWithAnimation />
+       </div>
 
         <div>
           {/* about section  */}
@@ -125,7 +144,8 @@ const HeaderSection = () => {
 
         <div className="p-2">
           <span className="text-balance opacity-80">
-            <span className="font-bold underline  text-sm ml-10 mr-2"></span>I am a{" "}
+            <span className="font-bold underline  text-sm ml-10 mr-2"></span>I
+            am a{" "}
             <span className="font-bold underline  text-sm ml-2 mr-2">
               software developer
             </span>
@@ -143,7 +163,9 @@ const HeaderSection = () => {
               React with Shadcn and Tailwind CSS
             </span>
             My proficiency with
-            <span className="font-bold underline  text-sm ml-2 mr-2">Redux Toolkit</span>
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              Redux Toolkit
+            </span>
             and core React concepts like hooks, components, and props ensures
             seamless state management On the back-end, I excel in developing
             microservices using
@@ -151,7 +173,9 @@ const HeaderSection = () => {
               Node.js, Express, and NestJS
             </span>
             with hands-on experience in databases such as
-            <span className="font-bold underline  text-sm ml-2 mr-2">MySQL, MongoDB</span>
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              MySQL, MongoDB
+            </span>
             utilizing ORM tools like
             <span className="font-bold underline  text-sm ml-2 mr-2">
               Sequelize and Mongoose
