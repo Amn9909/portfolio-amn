@@ -19,8 +19,9 @@ const HeaderSection = () => {
       >
         <div className="m-2">
           <h1 className="p-2 font-mono text-8xl 3xs:text-5xl xxs:text-7xl xs:text-7xl ">
-            Hi, i'm Aman
+            Hi, I&apos;m Aman
           </h1>
+
           <SepratorWithAnimation />
           <h2 className="opacity-80">
             Software developer from pune, product builder & contributor{" "}
@@ -45,12 +46,12 @@ const HeaderSection = () => {
         </motion.div>
         <SepratorWithAnimation />
 
-        <div >
+        <div>
           <div className="flex">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{
-                delay : 2, 
+                delay: 2,
                 repeat: Infinity,
                 duration: 3,
                 ease: "easeInOut",
@@ -67,11 +68,11 @@ const HeaderSection = () => {
             <span className="ml-2 mr-1 text-xl font-bold underline">
               Aman Kazi,
             </span>
-            and I'm a passionate software developer with expertise in
-            delivering interactive frontends and robust backend solutions. Over
-            the past 2 years, I have honed my skills in modern JavaScript
-            frameworks like React and Next.js, backend technologies such as
-            Node.js and NestJS, and databases including MySQL and MongoDB
+            and I&apos;m a passionate software developer with expertise in delivering
+            interactive frontends and robust backend solutions. Over the past 2
+            years, I have honed my skills in modern JavaScript frameworks like
+            React and Next.js, backend technologies such as Node.js and NestJS,
+            and databases including MySQL and MongoDB
           </span>
         </div>
         <SepratorWithAnimation />
