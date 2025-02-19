@@ -119,7 +119,7 @@ const projects = [
 
 const AskitHeroSection = () => {
   return (
-    <div className="mt-24 ">
+    <div>
       <HeaderSection />
       <AppleFloatingDock />
     </div>

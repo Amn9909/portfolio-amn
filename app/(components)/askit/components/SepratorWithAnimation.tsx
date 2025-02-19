@@ -16,7 +16,7 @@ const SepratorWithAnimation = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1, duration: 2, ease: "backOut" }}
     >
-      <Separator className="my-2" />
+      <Separator className="mb-2" />
     </motion.div>
   );
 };
