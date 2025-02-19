@@ -64,3 +64,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+html, body {
+  @apply text-black dark:text-white bg-white dark:bg-black; /* Ensures default text & background */
+}
+

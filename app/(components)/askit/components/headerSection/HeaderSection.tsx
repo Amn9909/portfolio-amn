@@ -15,14 +15,14 @@ const HeaderSection = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  }
+  };
   return (
     <div className="flex justify-center">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeIn" }}
-        className="p-2 text-white w-[50%] 3xs:w-[100%] xxs:w-[100%] xs:w-[100%] sm:w-[100%] md:w-[50%] xl:w-[50%]"
+        className="p-2  w-[50%] 3xs:w-[100%] xxs:w-[100%] xs:w-[100%] sm:w-[100%] md:w-[50%] xl:w-[50%]"
       >
         {/* heading and sub-title  */}
 
@@ -46,7 +46,7 @@ const HeaderSection = () => {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2, ease: "backOut" }}
-          className="text-white w-[50%] p-2 flex"
+          className=" w-[50%] p-2 flex items-center justify-center"
         >
           <Badge>
             <LocationTriggerIcon />
@@ -85,9 +85,9 @@ const HeaderSection = () => {
           {/* about section description */}
 
           <div className="p-2">
-            <span className="text-balance opacity-80">
+            <span className="text-balance opacity-80  ml-10">
               My name is
-              <span className="ml-2 mr-1 text-xl font-bold underline">
+              <span className="ml-2 mr-1  text-sm font-bold underline">
                 Aman Kazi,
               </span>
               and I&apos;m a passionate software developer with expertise in
@@ -125,15 +125,47 @@ const HeaderSection = () => {
 
         <div className="p-2">
           <span className="text-balance opacity-80">
-            My name is
-            <span className="ml-2 mr-1 text-xl font-bold underline">
-              Aman Kazi,
+            <span className="font-bold underline  text-sm ml-10 mr-2"></span>I am a{" "}
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              software developer
             </span>
-            and I&apos;m a passionate software developer with expertise in
-            delivering interactive frontends and robust backend solutions. Over
-            the past 2 years, I have honed my skills in modern JavaScript
-            frameworks like React and Next.js, backend technologies such as
-            Node.js and NestJS, and databases including MySQL and MongoDB
+            with over
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              two years of experience
+            </span>
+            delivering
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              interactive front-end
+            </span>
+            interfaces and robust back-end solutions. I specialize in frameworks
+            like
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              React with Shadcn and Tailwind CSS
+            </span>
+            My proficiency with
+            <span className="font-bold underline  text-sm ml-2 mr-2">Redux Toolkit</span>
+            and core React concepts like hooks, components, and props ensures
+            seamless state management On the back-end, I excel in developing
+            microservices using
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              Node.js, Express, and NestJS
+            </span>
+            with hands-on experience in databases such as
+            <span className="font-bold underline  text-sm ml-2 mr-2">MySQL, MongoDB</span>
+            utilizing ORM tools like
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              Sequelize and Mongoose
+            </span>{" "}
+            I am skilled in implementing
+            <span className="font-bold underline  text-sm ml-2 mr-2">
+              authentication, authorization
+            </span>
+            and data manipulation strategies, and integrating third-party
+            services, including
+            <span className="font-bold underline text-sm ml-2 mr-2">
+              Zoho Inventory, AWS SNS, Redis, S3, Google SMTP, and Socket.IO for
+              real-time communication
+            </span>
           </span>
         </div>
       </motion.div>
