@@ -123,8 +123,7 @@ const AskitHeroSection = () => {
     <div className="w-[50%] 3xs:w-[100%] xxs:w-[100%] xs:w-[100%] sm:w-[100%] md:w-[50%] xl:w-[50%]">
       <HeaderSection />
       <Socials />
-      <Socials />
-      <AppleFloatingDock />
+      {/* <AppleFloatingDock /> */}
     </div>
   );
 };
