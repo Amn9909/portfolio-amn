@@ -89,10 +89,10 @@ const HeaderSection = () => {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{
-                delay: 2,
-                repeat: Infinity,
-                duration: 3,
-                ease: "easeInOut",
+                repeat: Infinity, // Infinite loop
+                repeatType: "loop", // Ensures smooth looping
+                duration: 3, // 3 seconds per full rotation
+                ease: "linear", // Makes rotation smooth and consistent
               }}
               className="mr-2"
             >
@@ -128,10 +128,10 @@ const HeaderSection = () => {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{
-              delay: 2,
-              repeat: Infinity,
-              duration: 3,
-              ease: "easeInOut",
+              repeat: Infinity, // Infinite loop
+              repeatType: "loop", // Ensures smooth looping
+              duration: 3, // 3 seconds per full rotation
+              ease: "linear", // Makes rotation smooth and consistent
             }}
             className="mr-2"
           >
