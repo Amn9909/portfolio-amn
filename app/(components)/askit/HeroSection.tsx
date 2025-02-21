@@ -5,8 +5,9 @@ import ProjectsCards from "./components/ProjectsCards";
 import { AnimatedPin } from "./components/Profile3DCard";
 import { AskCarousel } from "./components/Carousel";
 import PricingSectionCards from "./components/pricingSection/Pricing";
-import { AppleFloatingDock } from "./components/doc/AppleDoc";
+import { AppleFloatingDock } from "./components/appleDoc/AppleDoc";
 import HeaderSection from "./components/headerSection/HeaderSection";
+import Socials from "./components/socials/Socials";
 
 const projects = [
   {
@@ -119,8 +120,10 @@ const projects = [
 
 const AskitHeroSection = () => {
   return (
-    <div>
+    <div className="w-[50%] 3xs:w-[100%] xxs:w-[100%] xs:w-[100%] sm:w-[100%] md:w-[50%] xl:w-[50%]">
       <HeaderSection />
+      <Socials />
+      <Socials />
       <AppleFloatingDock />
     </div>
   );

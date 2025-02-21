@@ -7,7 +7,8 @@ import PaperIcon from "@/lib/src/PaperIcon";
 import LocationTriggerIcon from "@/lib/src/LocationTriggerIcon";
 import SepratorWithAnimation from "../SepratorWithAnimation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import profilePicImg from "../../../../asset/profile-pic.jpg"
+import profilePicImg from "../../../../asset/profile-pic.jpg";
+import Socials from "../socials/Socials";
 
 const HeaderSection = () => {
   const dawnloadCV = () => {
@@ -25,25 +26,26 @@ const HeaderSection = () => {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeIn" }}
-        className="p-2  w-[50%] 3xs:w-[100%] xxs:w-[100%] xs:w-[100%] sm:w-[100%] md:w-[50%] xl:w-[50%]"
+        className="p-2"
       >
         {/* heading and sub-title  */}
 
         <div className="p-2 flex">
           <div className="w-[70%]">
-            <h1 className="font-mono text-8xl 3xs:text-5xl xxs:text-7xl xs:text-6xl ">
+            <h1 className=" text-4xl 3xs:text-4xl xxs:text-6xl xs:text-5xl ">
               Hi, I&apos;m
             </h1>
-            <h1 className="font-mono text-8xl 3xs:text-5xl xxs:text-7xl xs:text-7xl">
+            <h1 className="font-sans text-8xl font-bold 3xs:text-5xl xxs:text-7xl xs:text-7xl">
               Aman
             </h1>
           </div>
 
           <motion.div
-           initial={{ y: 100, opacity: 0 }}
-           animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 0.8, ease: "easeIn" }}
-           className="w-[30%]">
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeIn" }}
+            className="w-[30%]"
+          >
             <Avatar className="w-30 h-30">
               <AvatarImage src={profilePicImg.src} alt="@shadcn" />
               <AvatarFallback>AK</AvatarFallback>
@@ -51,34 +53,34 @@ const HeaderSection = () => {
           </motion.div>
         </div>
         <div>
-        <SepratorWithAnimation />
-            <h2 className="opacity-80">
-              Software developer from pune, product builder & contributor{" "}
-            </h2>
+          <SepratorWithAnimation />
+          <h2 className="opacity-80">
+            Software developer from pune, product builder & contributor{" "}
+          </h2>
         </div>
 
-       <div>
-         {/* Badges  */}
+        <div>
+          {/* Badges  */}
 
-         <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 2, ease: "backOut" }}
-          className="p-2 flex items-center justify-start"
-        >
-          <Badge>
-            <LocationTriggerIcon />
-            <span>Pune</span>
-          </Badge>
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 2, ease: "backOut" }}
+            className="p-2 flex items-center justify-start"
+          >
+            <Badge>
+              <LocationTriggerIcon />
+              <span>Pune</span>
+            </Badge>
 
-          <Badge className="ml-2" onClick={dawnloadCV}>
-            <PaperIcon />
-            <span>Resume</span>
-          </Badge>
-        </motion.div>
+            <Badge className="ml-2" onClick={dawnloadCV}>
+              <PaperIcon />
+              <span>Resume</span>
+            </Badge>
+          </motion.div>
 
-        <SepratorWithAnimation />
-       </div>
+          <SepratorWithAnimation />
+        </div>
 
         <div>
           {/* about section  */}

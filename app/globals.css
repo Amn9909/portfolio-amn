@@ -69,3 +69,9 @@ html, body {
   @apply text-black dark:text-white bg-white dark:bg-black; /* Ensures default text & background */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html, body {
+  @apply font-sans;
+}
+

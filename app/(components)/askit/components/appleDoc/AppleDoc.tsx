@@ -8,6 +8,7 @@ import {
   IconHome,
   IconNewSection,
   IconTerminal2,
+  IconBrandLinkedin
 } from "@tabler/icons-react";
 import ThemeSwitcher from "@/app/(toggleDarkMode)/ThemeSwitcher";
 import { motion } from "framer-motion";
@@ -16,21 +17,21 @@ export function AppleFloatingDock() {
     {
       title: "Theme",
       icon: <ThemeSwitcher />,
-      href: "#",
+      href: "/",
     },
     {
       title: "Home",
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/",
+      href: "/home",
     },
     {
       title: "About",
       icon: (
         <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "about",
+      href: "/about",
     },
 
     {
@@ -56,18 +57,25 @@ export function AppleFloatingDock() {
       href: "/newsletter",
     },
     {
-      title: "Twitter",
+      title: "X",
       icon: (
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://x.com/amn_ak09",
     },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/Amn9909",
+    },
+    {
+      title: "Linkedin",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/amankaziak",
     },
   ];
   return (
