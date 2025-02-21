@@ -65,7 +65,7 @@ const HeaderSection = () => {
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 2, ease: "backOut" }}
+            transition={{ duration: 2, ease: "anticipate" }}
             className="p-2 flex items-center justify-start"
           >
             <Badge>
