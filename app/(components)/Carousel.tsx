@@ -1,6 +1,6 @@
-'use client'
-import { Card, CardContent } from "@/components/ui/card"
-import Autoplay from "embla-carousel-autoplay"
+"use client";
+import { Card, CardContent } from "@/components/ui/card";
+import Autoplay from "embla-carousel-autoplay";
 
 export function Example() {
   return (
@@ -10,9 +10,8 @@ export function Example() {
           delay: 2000,
         }),
       ]}
-    >
-    </Carousel>
-  )
+    ></Carousel>
+  );
 }
 
 import {
@@ -21,8 +20,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
-
+} from "@/components/ui/carousel";
+import ThemeSwitcher from "../(toggleDarkMode)/ThemeSwitcher";
 
 interface Project {
   name: string;
@@ -30,14 +29,14 @@ interface Project {
   technologies: string[];
 }
 interface Skill {
-  projects: Project[]
+  projects: Project[];
 }
 
 const CustomCarousel: React.FC<Skill> = ({ projects }) => {
   return (
     <div className="p-2 h-full w-full xl:w-2/3 3xs:w-2/3 ">
       <Carousel
-      className="flex justify-center items-center"
+        className="flex justify-center items-center"
         plugins={[
           Autoplay({
             delay: 2000,
@@ -46,8 +45,10 @@ const CustomCarousel: React.FC<Skill> = ({ projects }) => {
         opts={{
           align: "start",
           loop: true,
-        }}>
-        <CarouselContent className="h-full">
+        }}
+      >
+          <ThemeSwitcher />
+        {/* <CarouselContent className="w-full h-full">
           {projects.map((proj) =>
             <CarouselItem key={proj.name}>
               <Card>
@@ -57,13 +58,12 @@ const CustomCarousel: React.FC<Skill> = ({ projects }) => {
               </Card>
             </CarouselItem>
           )}
-        </CarouselContent>
+        </CarouselContent> */}
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-
     </div>
-  )
-}
+  );
+};
 
-export default CustomCarousel
+export default CustomCarousel;

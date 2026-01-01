@@ -8,6 +8,14 @@ import ProjectCards from "../(components)/ProjectCards";
 import { useTheme } from "next-themes";
 import GithubContribution from "../asset/git-commits.png"
 import Image from "next/image";
+ const backendImg = '/backend-dev.jpg'
+ const frontendImg = '/front-end.jpg'
+ const graphicsImg = '/graphics-design.jpg'
+ const videoEditingImg = '/video-editing.jpg'
+ const contentCreationImg = '/cc.jpg'
+ const agencyServicesImg = '/agency.jpg'
+
+
 
 
 
@@ -18,14 +26,16 @@ const Home = () => {
     const skills = [
         "Next.js",
         "React",
+        "NestJS",
+        "Docker",
+        "AWS",
+        "Mongoose",
+        "PostgreSQL",
         "Redux",
         "shadcn UI",
         "Tailwind CSS",
-        "NestJS",
         "Express.js",
         "Socket.IO",
-        "Mongoose",
-        "Docker",
         "Swagger",
         "WebSocket Implementation",
         "API Development",
@@ -42,6 +52,7 @@ const Home = () => {
                 'Built microservices using Node.js, Express, and NestJS, incorporating database integration, ' +
                 'authentication, and real-time features like WebSocket communication.',
             technologies: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Docker'],
+            imageUrl: backendImg,
         },
         {
             name: 'Frontend Development',
@@ -50,6 +61,7 @@ const Home = () => {
                 'JavaScript frameworks to deliver seamless user experiences, integrating responsive designs ' +
                 'and state management for robust functionality.',
             technologies: ['React', 'Next.js', 'Redux Toolkit', 'Tailwind CSS', 'Matrial UI', 'shadcn'],
+            imageUrl: frontendImg,
         },
         {
             name: 'Graphics Design',
@@ -58,6 +70,7 @@ const Home = () => {
                 'Focused on creating visually appealing content that aligns with brand identity and resonates ' +
                 'with target audiences.',
             technologies: ['Adobe Photoshop', 'Adobe Illustrator', 'Figma', 'Canva'],
+            imageUrl: graphicsImg,
         },
         {
             name: 'Video Editing',
@@ -66,6 +79,7 @@ const Home = () => {
                 'and social media. Utilized advanced editing tools to ensure smooth transitions, captivating effects, ' +
                 'and professional-grade output.',
             technologies: ['Adobe Premiere Pro', 'After Effects', 'Cap cut'],
+            imageUrl: videoEditingImg,
         },
         {
             name: 'Content Creation',
@@ -73,6 +87,7 @@ const Home = () => {
                 'Developed engaging content strategies and delivered high-value written, visual, and multimedia content ' +
                 'for blogs, social media, and marketing campaigns. Ensured alignment with SEO principles and audience engagement.',
             technologies: ['WordPress', 'Google Docs', 'Grammarly', 'SEO Tools (Ahrefs, SEMrush)'],
+            imageUrl: contentCreationImg,
         },
         {
             name: 'Agency Services',
@@ -80,6 +95,7 @@ const Home = () => {
                 'Operated as a one-stop solution for clients, providing end-to-end services ranging from web development ' +
                 'to digital marketing and branding. Ensured successful project delivery by collaborating with diverse teams.',
             technologies: ['Asana', 'Slack', 'Google Workspace', 'Notion', 'Zoho CRM'],
+            imageUrl: agencyServicesImg,
         },
     ];
 

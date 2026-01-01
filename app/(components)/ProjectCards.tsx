@@ -2,11 +2,13 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Badge } from '@/components/ui/badge';
+import Image, { StaticImageData } from 'next/image';
 
 interface Project {
     name: string;
     description: string;
     technologies: string[];
+    imageUrl?: any;
 }
 interface Skills {
     projects: Project[];
@@ -23,6 +25,18 @@ const ProjectCards: React.FC<Skills> = ({ projects }) => {
                         sm:col-span-6 xs:col-span-6 xxs:col-span-6 3xs:col-span-6"
                 >
                     <Card className="h-full flex flex-col">
+                        {project.imageUrl && (
+                            <div className="p-4 flex justify-center">
+                                <Image
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                                style={{ width: '100%', height: '200px', objectFit: 'cover' }} 
+                                src={project.imageUrl} 
+                                alt={project.name} 
+                                width={0} 
+                                height={0} 
+                                className="rounded-md" />
+                            </div>
+                        )}
                         <CardHeader>{project.name}</CardHeader>
                         <CardContent>
                             <p>{project.description}</p>
