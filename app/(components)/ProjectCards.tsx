@@ -8,7 +8,7 @@ interface Project {
     name: string;
     description: string;
     technologies: string[];
-    imageUrl?: any;
+    imageUrl?: string;
 }
 interface Skills {
     projects: Project[];
